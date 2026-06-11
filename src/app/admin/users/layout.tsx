@@ -30,7 +30,7 @@ export default async function SharedLayout({ children }: { children: React.React
           <i className="ti ti-ban" style={{ fontSize: '40px', color: '#DC2626', display: 'block', marginBottom: '12px' }} aria-hidden />
           <h2 style={{ fontSize: '16px', fontWeight: '600', margin: '0 0 6px' }}>Akun Dinonaktifkan</h2>
           <p style={{ fontSize: '12px', color: '#6b7280' }}>
-            Akun Anda dinonaktifkan. Hubungi Admin SIMBUMD untuk informasi lebih lanjut.
+            Akun Anda dinonaktifkan. Hubungi Admin SIMBUBALADA untuk informasi lebih lanjut.
           </p>
         </div>
       </div>
