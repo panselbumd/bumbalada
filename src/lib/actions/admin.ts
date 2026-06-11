@@ -43,7 +43,7 @@ export async function createUser(formData: FormData) {
   const nip          = formData.get('nip') as string
 
   // Generate temp password
-  const tempPassword = `SIMBUMD-${Math.random().toString(36).slice(2, 10).toUpperCase()}`
+  const tempPassword = `SIMBUBALADA-${Math.random().toString(36).slice(2, 10).toUpperCase()}`
 
   // Buat user di Supabase Auth
   const { data: newUser, error } = await admin.auth.admin.createUser({
@@ -117,7 +117,7 @@ export async function resetPassword(userId: string) {
   const { data: { user: me } } = await supabase.auth.getUser()
   if (!me) throw new Error('Unauthorized')
 
-  const newPassword = `SIMBUMD-${Math.random().toString(36).slice(2, 10).toUpperCase()}`
+  const newPassword = `SIMBUBALADA-${Math.random().toString(36).slice(2, 10).toUpperCase()}`
 
   await admin.auth.admin.updateUserById(userId, { password: newPassword })
 
