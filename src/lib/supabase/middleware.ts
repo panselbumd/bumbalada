@@ -7,7 +7,7 @@ export async function updateSession(request: NextRequest) {
 
   // Jika env vars belum diset, bypass middleware — jangan crash
   if (!supabaseUrl || !supabaseKey) {
-    console.error('SIMBUMD: NEXT_PUBLIC_SUPABASE_URL atau NEXT_PUBLIC_SUPABASE_ANON_KEY belum diset')
+    console.error('SIMBUBALADA: NEXT_PUBLIC_SUPABASE_URL atau NEXT_PUBLIC_SUPABASE_ANON_KEY belum diset')
     return NextResponse.next({ request })
   }
 
@@ -47,7 +47,7 @@ export async function updateSession(request: NextRequest) {
       return NextResponse.redirect(url)
     }
   } catch (error) {
-    console.error('SIMBUMD Middleware error:', error)
+    console.error('SIMBUBALADA Middleware error:', error)
     // Jika gagal, tetap lanjutkan request — jangan 500
   }
 
