@@ -1,5 +1,5 @@
 -- ============================================================
--- SIMBUBALADA – Skema Database Lengkap
+-- SIMBUMD – Skema Database Lengkap
 -- Pemerintah Kota Batu · Versi 1.0.1
 -- IDEMPOTENT: Aman dijalankan berulang kali
 -- ============================================================
@@ -576,16 +576,19 @@ CREATE POLICY "notif_own" ON notifikasi FOR ALL USING (user_id = auth.uid());
 -- ============================================================
 
 INSERT INTO bumd (kode, nama, singkatan, jenis, direktur) VALUES
-  ('BWR',  'PT Batu Wisata Resource',        'PT BWR',        'perseroda', '......'),
-  ('PDAM', 'Perumdam Among Tani',     'Perumdam',      'perumda',   'MUCH. YUSUF, S.AP.')
+  ('BWR',  'PT Batu Wisata Resource',        'PT BWR',        'perseroda', 'Drs. Andi Susanto, M.Si.'),
+  ('PDAM', 'Perumdam Air Tirta Kencana',     'Perumdam',      'perumda',   'Ir. Budi Raharjo, M.T.'),
+  ('BATU', 'PT Batu Alam Indah',             'PT BAI',        'perseroda', 'Dr. Sri Lestari, M.M.'),
+  ('PSAR', 'PD Pasar Kota Batu',             'PD Pasar',      'perumda',   'Drs. Hendra Wibowo'),
+  ('BPI',  'PT Batu Properti Investama',     'PT BPI',        'perseroda', 'Slamet Haryono, S.E., M.M.'),
+  ('PARK', 'Perumda Perparkiran Kota Batu',  'Perumda Parkir','perumda',   'Wahyu Santoso, S.T.')
 ON CONFLICT (kode) DO NOTHING;
 
 INSERT INTO blud (kode, nama, singkatan, jenis) VALUES
+  ('RSUD',  'RSUD Kota Batu',                     'RSUD Batu',   'rumah_sakit'),
   ('PKM-A', 'Puskesmas BLUD Bumiaji',             'PKM Bumiaji', 'puskesmas'),
   ('PKM-B', 'Puskesmas BLUD Batu',                'PKM Batu',    'puskesmas'),
-  ('PKM-C', 'Puskesmas BLUD Beji',                'PKM Beji',    'puskesmas'),
-  ('PKM-D', 'Puskesmas BLUD Junrejo',             'PKM Junrejo',    'puskesmas'),
-  ('PKM-E', 'Puskesmas BLUD Sisir',               'PKM Sisir',    'puskesmas')
+  ('LAB',   'Laboratorium Klinik BLUD Kota Batu', 'Lab BLUD',    'laboratorium')
 ON CONFLICT (kode) DO NOTHING;
 
 -- Konfirmasi selesai

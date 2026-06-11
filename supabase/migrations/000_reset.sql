@@ -1,5 +1,5 @@
 -- ============================================================
--- SIMBUBALADA – RESET BERSIH (Jalankan SEBELUM 001_initial_schema.sql)
+-- SIMBUMD – RESET BERSIH (Jalankan SEBELUM 001_initial_schema.sql)
 -- Hapus semua objek yang mungkin sudah ada sebelumnya
 -- PERINGATAN: Ini akan menghapus semua data!
 -- ============================================================
