@@ -32,7 +32,7 @@ export default async function AppLayout({ children }: { children: React.ReactNod
             Akun Dinonaktifkan
           </h2>
           <p style={{ fontSize: '12px', color: '#6b7280' }}>
-            Akun Anda telah dinonaktifkan. Hubungi Admin SIMBUMD untuk informasi lebih lanjut.
+            Akun Anda telah dinonaktifkan. Hubungi Admin SIMBUBALADA untuk informasi lebih lanjut.
           </p>
         </div>
       </div>
