@@ -1,5 +1,5 @@
 -- ============================================================
--- SIMBUMD – Skema Database Lengkap
+-- BANITAMHID – Skema Database Lengkap
 -- Pemerintah Kota Batu · Versi 1.0.1
 -- IDEMPOTENT: Aman dijalankan berulang kali
 -- ============================================================
@@ -593,5 +593,5 @@ ON CONFLICT (kode) DO NOTHING;
 
 -- Konfirmasi selesai
 DO $$ BEGIN
-  RAISE NOTICE 'SIMBUMD schema berhasil diinisialisasi!';
+  RAISE NOTICE 'BANITAMHID schema berhasil diinisialisasi!';
 END $$;
