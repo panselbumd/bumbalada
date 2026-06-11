@@ -91,12 +91,14 @@ export default async function RolesPage({
   const { data: { user } } = await supabase.auth.getUser()
   if (!user) redirect('/login')
 
-  const { data: me } = await supabase
+  const { data: meRaw } = await supabase
     .from('profiles').select('role').eq('id', user.id).single()
+  const me = meRaw as { role: string } | null
   if (!me || !['superadmin', 'admin'].includes(me.role)) redirect('/dashboard')
 
   // Count users per role
-  const { data: allUsers } = await supabase.from('profiles').select('role, status')
+  const { data: allUsersRaw } = await supabase.from('profiles').select('role, status')
+  const allUsers = allUsersRaw as Array<{ role: string; status: string }> | null
   const roleCounts: Record<string, number> = {}
   ROLES.forEach(r => {
     roleCounts[r.key] = allUsers?.filter(u => u.role === r.key).length ?? 0

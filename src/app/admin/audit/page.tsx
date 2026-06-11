@@ -20,7 +20,8 @@ export default async function AuditPage({ searchParams }: { searchParams: { acti
   const { data: { user } } = await supabase.auth.getUser()
   if (!user) redirect('/login')
 
-  const { data: me } = await supabase.from('profiles').select('role').eq('id', user.id).single()
+  const { data: meRaw } = await supabase.from('profiles').select('role').eq('id', user.id).single()
+  const me = meRaw as { role: string } | null
   if (!me || !['superadmin','admin'].includes(me.role)) redirect('/dashboard')
 
   const limit = Number(searchParams.limit ?? 50)

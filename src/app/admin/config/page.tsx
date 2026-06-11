@@ -7,7 +7,8 @@ export default async function ConfigPage() {
   const { data: { user } } = await supabase.auth.getUser()
   if (!user) redirect('/login')
 
-  const { data: me } = await supabase.from('profiles').select('role').eq('id', user.id).single()
+  const { data: meRaw } = await supabase.from('profiles').select('role').eq('id', user.id).single()
+  const me = meRaw as { role: string } | null
   if (!me || me.role !== 'superadmin') redirect('/dashboard')
 
   return (
