@@ -3,7 +3,7 @@ import { Toaster } from 'react-hot-toast'
 import '@/styles/globals.css'
 
 export const metadata: Metadata = {
-  title:       'SIMBUMD – Pemerintah Kota Batu',
+  title:       'SIMBUBALADA – Pemerintah Kota Batu',
   description: 'Sistem Informasi Manajemen BUMD dan BLUD Pemerintah Kota Batu',
   icons:       { icon: '/favicon.svg' },
 }
