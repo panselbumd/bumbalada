@@ -1,6 +1,6 @@
 @echo off
 echo ============================================
-echo  SIMBUMD - Deploy ke Vercel (Windows)
+echo  SIMBUBALADA - Deploy ke Vercel (Windows)
 echo ============================================
 echo.
 
